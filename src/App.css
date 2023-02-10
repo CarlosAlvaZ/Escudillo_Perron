@@ -1,0 +1,64 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  background-image: url('./background.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: crimson;
+  height: 100vh;
+  user-select: none;
+}
+
+h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 40px;
+  text-shadow: 0 0 10px black, 0 0 20px black;
+}
+
+.imagen {
+  height: 50%;
+  margin: 30px;
+  transition: all 200ms ease;
+}
+
+.imagen:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  transform: scale(0.98);
+}
+
+.hearth {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hearth img {
+  width: 10%;
+  transform: scale(1);
+  animation-name: flotar;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+@keyframes flotar {
+  from {
+      transform: scale(1);
+  } to {
+      transform: scale(0.5) translateY(-400px);
+      opacity: 0;
+  }
+}
